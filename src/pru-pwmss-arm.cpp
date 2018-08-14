@@ -192,6 +192,7 @@ void executeStop(pollfd* pollfds, uint8_t pwmssBits)
 
 void executeSetData(pollfd* pollfds, uint8_t pwmssId, uint16_t period, uint16_t duA, uint16_t duB)
 {
+    printf("period: %d, cmpA: %d, cmpB: %d\n", period, duA, duB);
     if(pwmssId > 2) {
         printf("Usage: pru-pwmss-arm set-data <pwmss id><period><cmp A><cmp B>");
         return;
